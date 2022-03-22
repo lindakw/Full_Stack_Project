@@ -7,65 +7,25 @@ import {
 } from "react-native";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { AntDesign } from "@expo/vector-icons";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Weather from "./Component/Weather/Weather";
+import Home from "./Component/Home/Home";
+//import News from "./Component/News/News";
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [isSearching, setIsSearching] = useState(true);
-  const [query, setQuery] = useState("");
-  const [articles, setArticles] = useState([]);
-
-  const searchNews = () => {
-    (async () => {
-      try {
-        const newsResponse = await axios.get(
-          `http://localhost:3000/api/?q=${query}`
-        );
-        setArticles(newsResponse.data);
-        console.log("This is our data ===>", newsResponse.data);
-      } catch (err) {
-        console.log(err);
-      }
-    })();
-  };
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>We got the news!</Text>
-      {isSearching ? (
-        <View style={styles.searchContainer}>
-          <TextInput
-            placeholder="Search for news"
-            style={styles.searchInput}
-            onChangeText={setQuery}
-            value={query}
-          />
-          <TouchableOpacity
-            onPress={() => {
-              searchNews(), setIsSearching(!isSearching);
-            }}
-          >
-            <AntDesign
-              style={styles.icon}
-              name="search1"
-              size={28}
-              color="black"
-            />
-          </TouchableOpacity>
-        </View>
-      ) : (
-        <View>
-          <TouchableOpacity
-            onPress={() => {
-              articles[0]?.url;
-            }}
-          >
-            <Text style={styles.textArticle}>1. {articles[0]?.title}</Text>
-          </TouchableOpacity>
-        </View>
-      )}
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home"></Stack.Screen>
+        <Stack.Screen name="News" component="News"></Stack.Screen>
+        <Stack.Screen name="Weather"></Stack.Screen>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -100,6 +60,6 @@ const styles = StyleSheet.create({
   textArticle: {
     color: "white",
     fontSize: 15,
-    fontFamily: "fantasy",
+    fontFamily: "",
   },
 });
