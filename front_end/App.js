@@ -4,6 +4,7 @@ import {
   View,
   TextInput,
   TouchableOpacity,
+  Linking,
 } from "react-native";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -27,6 +28,7 @@ export default function App() {
       }
     })();
   };
+  const link = "articles[0].url"
   return (
     <View style={styles.container}>
       <Text style={styles.title}>We got the news!</Text>
@@ -46,7 +48,7 @@ export default function App() {
             <AntDesign
               style={styles.icon}
               name="search1"
-              size={28}
+              size={38}
               color="black"
             />
           </TouchableOpacity>
@@ -55,7 +57,7 @@ export default function App() {
         <View>
           <TouchableOpacity
             onPress={() => {
-              articles[0]?.url;
+             Linking.openURL(link)
             }}
           >
             <Text style={styles.textArticle}>1. {articles[0]?.title}</Text>
@@ -71,35 +73,36 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#E9967A",
     alignItems: "center",
-    justifyContent: "center",
+    justifyContent: "flex-start",
   },
   searchInput: {
-    marginTop: 25,
-    height: 30,
-    width: 400,
+   marginTop:75,
+    height: 50,
+    width: 300,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
     borderColor: "black",
     borderRadius: 20,
-    padding: 10,
+    fontSize:20,
+    paddingLeft:25
   },
   searchContainer: {
     flexDirection: "row",
   },
   icon: {
-    marginTop: 25,
-    marginLeft: 20,
+    marginTop: 85,
+    marginLeft: 0,
   },
   title: {
     fontFamily: "fantasy",
     fontSize: 30,
-    fontWeight: 800,
+    marginTop:75,
     color: "white",
   },
   textArticle: {
     color: "white",
-    fontSize: 15,
+    fontSize: 35,
     fontFamily: "fantasy",
   },
 });
