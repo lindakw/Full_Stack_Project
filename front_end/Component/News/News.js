@@ -48,7 +48,7 @@ const News = () => {
         </View>
       ) : (
         <View>
-          <Text style={NewsStyles.textArticle}>1. {articles[0]?.title}</Text>
+          <Text style={NewsStyles.textArticle}>1 {articles[0]?.title}</Text>
         </View>
       )}
     </View>

@@ -38,4 +38,4 @@ const NewsStyles = StyleSheet.create({
     fontFamily: "",
   },
 });
-export default NewsStyles
+export default styles
