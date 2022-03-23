@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#E9967A",
+    backgroundColor: "black",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -13,10 +13,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "black",
+    borderColor: "white",
     borderRadius: 20,
     padding: 10,
-    color: "black",
+    color: "white",
     fontSize: 16,
   },
   searchContainer: {
@@ -27,15 +27,14 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   title: {
-    //fontFamily: "fantasy",
+    fontFamily: "fantasy",
     fontSize: 30,
-    //fontWeight: 800,
-    color: "white",
+    color: "pink",
   },
   textArticle: {
     color: "white",
     fontSize: 15,
-    fontFamily: "",
+    fontFamily: "fantasy",
   },
 });
 
