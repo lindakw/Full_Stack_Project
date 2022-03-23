@@ -1,6 +1,11 @@
 import { StyleSheet } from "react-native";
 
-const HomeStyle = StyleSheet.create({
-  container: {},
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    //backgroundColor: "blue",
+    borderWidth: 1,
+    borderColor: "black",
+  },
 });
-export default HomeStyle;
+export default styles;

@@ -1,6 +1,8 @@
-import { View, Text } from "react-native";
+import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { useEffect, useState } from "react";
 import React from "react";
 import axios from "axios";
+import styles from "./NewsStyles";
 import { AntDesign } from "@expo/vector-icons";
 
 const News = () => {
@@ -26,9 +28,14 @@ const News = () => {
       <Text style={styles.title}>We got the news!</Text>
       {isSearching ? (
         <View style={styles.searchContainer}>
-          <TextInput
+          {/* <TextInput
             placeholder="Search for news"
             style={styles.searchInput}
+            onChangeText={setQuery}
+            value={query}
+          /> */}
+          <TextInput
+            placeholder="search"
             onChangeText={setQuery}
             value={query}
           />
