@@ -1,18 +1,19 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text, TextInput , TouchableOpacity} from "react-native";
+import React, {useState} from "react";
 import axios from "axios";
 import { AntDesign } from "@expo/vector-icons";
+import styles from './NewsStyle'
 
 const News = () => {
   const [isSearching, setIsSearching] = useState(true);
-  const [query, setQuery] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
   const [articles, setArticles] = useState([]);
 
   const searchNews = () => {
     (async () => {
       try {
         const newsResponse = await axios.get(
-          `http://localhost:3000/api/?q=${query}`
+          `http://localhost:3000/api/?q=${searchTerm}`
         );
         setArticles(newsResponse.data);
         console.log("This is our data ===>", newsResponse.data);
@@ -29,8 +30,8 @@ const News = () => {
           <TextInput
             placeholder="Search for news"
             style={styles.searchInput}
-            onChangeText={setQuery}
-            value={query}
+            onChangeText={setSearchTerm}
+            value={searchTerm}
           />
           <TouchableOpacity
             onPress={() => {
@@ -41,7 +42,7 @@ const News = () => {
               style={styles.icon}
               name="search1"
               size={28}
-              color="black"
+              color="white"
             />
           </TouchableOpacity>
         </View>
