@@ -1,15 +1,25 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
-import HomeStyles from "./Home"
+import styles from "./HomeStyle";
 
-const Home = ({navigation}) => {
+const Home = (props) => {
   return (
-    <View style={HomeStyles.container}>
-      <TouchableOpacity style={HomeStyles.newsContainer} onPress={()=>{navigation.navigate('News')}}>
-        <Text style={HomeStyles.buttonText}>Check the News!</Text>
-      </TouchableOpacity >
-      <TouchableOpacity style={HomeStyles.weatherContainer} onPress={()=>{navigation.navigate('Weather')}}>
-        <Text style={HomeStyles.buttonText}>Check the Weather!</Text>
+    <View style={styles.container}>
+      <TouchableOpacity style={styles.newsContainer}>
+        <Text
+          style={styles.buttonText}
+          onPress={() => props.navigation.navigate("News")}
+        >
+          Check the News!
+        </Text>
+      </TouchableOpacity>
+      <TouchableOpacity style={styles.optionContainer}>
+        <Text
+          style={styles.buttonText}
+          onPress={() => props.navigation.navigate("Weather")}
+        >
+          Check the Weather!
+        </Text>
       </TouchableOpacity>
     </View>
   );
