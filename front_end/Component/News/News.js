@@ -2,7 +2,7 @@ import { View, Text, TextInput , TouchableOpacity} from "react-native";
 import React, {useState} from "react";
 import axios from "axios";
 import { AntDesign } from "@expo/vector-icons";
-import NewsStyles from './NewsStyles'
+import styles from './NewsStyles'
 
 const News = () => {
   const [isSearching, setIsSearching] = useState(true);
@@ -23,13 +23,13 @@ const News = () => {
     })();
   };
   return (
-    <View style={NewsStyles.container}>
-      <Text style={NewsStyles.title}>We got the news!</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>We got the news!</Text>
       {isSearching ? (
-        <View style={NewsStyles.searchContainer}>
+        <View style={styles.searchContainer}>
           <TextInput
             placeholder="Search for news"
-            style={NewsStyles.searchInput}
+            style={styles.searchInput}
             onChangeText={setQuery}
             value={query}
           />
@@ -39,7 +39,7 @@ const News = () => {
             }}
           >
             <AntDesign
-              style={NewsStyles.icon}
+              style={styles.icon}
               name="search1"
               size={28}
               color="black"
@@ -48,7 +48,7 @@ const News = () => {
         </View>
       ) : (
         <View>
-          <Text style={NewsStyles.textArticle}>1 {articles[0]?.title}</Text>
+          <Text style={styles.textArticle}>1 {articles[0]?.title}</Text>
         </View>
       )}
     </View>

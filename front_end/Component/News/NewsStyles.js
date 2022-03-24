@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const NewsStyles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#E9967A",
