@@ -18,6 +18,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     textAlign: 'center',
     paddingTop: 20,
+    paddingLeft: 30,
   },
   newsContainer: {
     width: 250,
@@ -27,6 +28,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     paddingTop: 20,
     marginBottom: 40,
+    paddingLeft: 30,
   
   },
  

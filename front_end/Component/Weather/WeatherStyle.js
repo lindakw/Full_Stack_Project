@@ -5,10 +5,8 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     height: "100%",
     flex: 1,
-    justifyContent: "flex-start",
-    alignItems: "center",
-   
   },
+  
   weatherImg: {
     position: "absolute",
     width: '100%',
@@ -17,7 +15,7 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     flexDirection: "row",
-    marginTop: 25,
+    marginTop: 20,
     
   },
   input: {
@@ -25,9 +23,67 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderWidth: 2,
     marginRight: 10,
+    marginLeft: 40,
     width: 250,
     color:"white",
+    paddingLeft: 10,
+    
   },
+  cityText: {
+    color: "white",
+    fontSize: 25,
+    marginTop: 20,
+    textAlign: "center",
+    
+  },
+  tempText: {
+    color: "white",
+    fontSize: 50,
+    textAlign: "center",
+
+  },
+  infoText: {
+    color: "white",
+    fontSize: 20,
+    textAlign: "center",
+  marginBottom: 5,
+    
+  },
+  highLow: {
+    flexDirection: "row",
+    justifyContent: "center",
+    paddingBottom: 20,
+  },
+  highText: {
+    color: "white",
+    fontSize: 16,
+    marginRight: 20,
+    
+  },
+  lowText: {
+    color: "white",
+    fontSize: 16,
+  },
+  infoStyle: {
+    color: "white",
+    fontSize: 18,
+    flexDirection: "column",
+    alignSelf: "center",
+    // flexWrap: "wrap",
+    paddingTop: 10,
+  },
+  forcastView: {
+    // marginTop: 20,
+    backgroundColor: "#696969",
+    width: 300,
+    height: 100,
+    marginLeft: 40,
+    borderRadius: 5,
+    borderWidth: 0.5,
+    borderColor: 'white',
+   
+    
+  }
   
 });
 

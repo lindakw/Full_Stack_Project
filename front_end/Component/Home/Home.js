@@ -1,7 +1,6 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import styles from "./HomeStyle"
-import News from "../News/News";
 
 const Home = (props) => {
   return (
