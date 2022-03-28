@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import styles from "./NewsStyle";
 import { AntDesign } from "@expo/vector-icons";
+import styles from './NewsStyle'
 
 const News = () => {
   const [isSearching, setIsSearching] = useState(false);

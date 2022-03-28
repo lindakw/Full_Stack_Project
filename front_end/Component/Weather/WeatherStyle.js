@@ -1,4 +1,11 @@
-import { StyleSheet } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  TouchableOpacity,
+  Image,
+} from "react-native";
 
 const styles = StyleSheet.create({
   container: {
