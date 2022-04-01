@@ -16,11 +16,13 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "black",
     fontSize: 20,
+    paddingLeft:30
+    
   },
   optionContainer: {
     width: 250,
-    height: 60,
-    backgroundColor: "pink",
+    height: 80,
+    backgroundColor: "tomato",
     borderRadius: 40,
     textAlign: 'center',
     paddingTop: 20,
@@ -29,13 +31,13 @@ const styles = StyleSheet.create({
   newsContainer: {
     width: 250,
     height: 60,
-    backgroundColor: "pink",
+    backgroundColor: "white",
     borderRadius: 40,
     textAlign: 'center',
-    paddingTop: 20,
+    // padding: 20,
     marginBottom: 40,
 
-    paddingLeft: 30,
+    
   
   },
 
@@ -43,7 +45,10 @@ const styles = StyleSheet.create({
   
   buttonText: {
     color: "black",
-    fontSize: 20,
+    fontSize: 22,
+     paddingLeft: 15,
+     marginBottom: -20,
+    
   },
   optionContainer: {
     width: 250,

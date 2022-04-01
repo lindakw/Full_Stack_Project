@@ -8,6 +8,11 @@ const forecastUrl = `https://api.openweathermap.org/data/2.5/onecall?lat={lat}&l
 //const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast/daily?appid=${process.env.WEATHER_KEY}&cnt=7&q=`
 //`https://api.openweathermap.org/data/2.5/weather?appid=${process.env.WEATHER_KEY}&units=imperial&q=`;
 
+//https://api.openweathermap.org/data/2.5/forecast?appid=80e84043f2204dfda5d64734dc8ede47
+
+
+
+//
 router.get("/", async (req, res) => {
   try {
     const urlQuery = news_url + req.query.q;

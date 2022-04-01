@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
   },
   textArticle: {
     color: "white",
-    fontSize: 13,
+    fontSize: 15,
     marginTop: 20,
     marginLeft: 20,
    

@@ -14,10 +14,10 @@ const News = () => {
       try {
         const newsResponse = await axios.get(
           // to access the web
-           `http://localhost:3000/api/?q=${searchTerm}`
+          //  `http://localhost:3000/api/?q=${searchTerm}`
 
           // for the simulator 
-          // `http://10.0.2.2:3000/api/?q=${searchTerm}`
+           `http://10.0.2.2:3000/api/?q=${searchTerm}`
 
           );
           setIsSearching(true)
@@ -28,6 +28,7 @@ const News = () => {
       }
     })();
   };
+  
 
 
   return (
@@ -67,7 +68,7 @@ const News = () => {
        */}
        {isSearching ? (
         <FlatList 
-        data={articles.slice(0, 7)}
+        data={articles.slice(0, 8)}
         renderItem={({item, index}) => (
           <View key={index}>
             <Image style={styles.imgArticle} source={{
@@ -76,6 +77,7 @@ const News = () => {
             <TouchableOpacity style={styles.articlelink} onPress={() => Linking.openURL(item.url)} >
               <Text style={styles.textArticle}>{item.title}</Text>
             </TouchableOpacity>
+            <Text style={styles.textArticle}>{item.description}</Text>
             
             <Text style={styles.texts}>{item.source.name}</Text>
           </View>

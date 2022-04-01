@@ -7,8 +7,9 @@ const Home = (props) => {
     <View style={styles.container}>
       <TouchableOpacity style={styles.newsContainer}>
         <Text
-          style={styles.buttonText}
+          
           onPress={() => props.navigation.navigate("News")}
+          style={styles.buttonText}
         >
           Check the News!
         </Text>
