@@ -14,7 +14,7 @@ const News = () => {
       try {
         const newsResponse = await axios.get(
           // to access the web
-          `http://localhost:3000/api/?q=${searchTerm}`
+           `http://localhost:3000/api/?q=${searchTerm}`
 
           // for the simulator 
           // `http://10.0.2.2:3000/api/?q=${searchTerm}`
@@ -36,6 +36,7 @@ const News = () => {
         <View style={styles.searchContainer}>
           <TextInput
             placeholder="Search for news"
+            placeholderTextColor="gray"
             style={styles.searchInput}
             onChangeText={setSearchTerm}
             value={searchTerm}
@@ -66,7 +67,7 @@ const News = () => {
        */}
        {isSearching ? (
         <FlatList 
-        data={articles.slice(0, 5)}
+        data={articles.slice(0, 7)}
         renderItem={({item, index}) => (
           <View key={index}>
             <Image style={styles.imgArticle} source={{

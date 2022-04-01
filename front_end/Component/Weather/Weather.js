@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, TextInput,  TouchableOpacity, Image, ScrollView, FlatList} from "react-native";
 
 import React, {useState} from "react";
-import styles from "./WeatherStyles"
+import styles from "./WeatherStyle"
 import axios from "axios";
 import { AntDesign } from "@expo/vector-icons";
 
@@ -28,7 +28,7 @@ const Weather = () => {
     (async () => {
       try {
         const weatherResponse= await axios.get(
-          `http://localhost:3000/api/weather?q=${place}`
+           `http://localhost:3000/api/weather?q=${place}`
 
             // for simulator
           // `http://10.0.2.2:3000/api/weather?q=${place}`
@@ -76,7 +76,7 @@ console.log("this is info.list==>", info.list);
          
         <View style={styles.displayInfo}> 
           <Text style={styles.cityText}>{info.city?.name}</Text>
-          <Text style={styles.tempText}>{Math.round(info?.list[0]?.main?.temp)}°F</Text>
+          <Text style={styles.tempText}>{Math.round(info.list[0].main?.temp)}°F</Text>
           <Text style={styles.infoText}>{info.list[0].weather?.[0].main}</Text>
           <View style={styles.highLow}>
             <Text style={styles.highText}>H: {Math.round(info.list[0].main?.temp_max)}°F</Text>
