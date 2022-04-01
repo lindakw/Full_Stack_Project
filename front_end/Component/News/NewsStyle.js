@@ -29,26 +29,52 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   title: {
-<<<<<<< HEAD
+
     // fontFamily: "fantasy",
     fontSize: 40,
     color: "pink", 
     textAlign: "center",
-=======
+
     fontSize: 30,
     color: "pink",
->>>>>>> f9c4b8e677c1702b409a0149758e4cfd0d1de752
+
   },
   textArticle: {
     color: "white",
     fontSize: 15,
-<<<<<<< HEAD
+
     marginTop: 20,
     marginLeft: 20,
    
     // fontFamily: "fantasy",
-=======
->>>>>>> f9c4b8e677c1702b409a0149758e4cfd0d1de752
+
+    // fontFamily: "fantasy",
+    fontSize: 40,
+    color: "pink",
+    textAlign: "center",
+  },
+  textArticle: {
+    color: "white",
+    fontSize: 13,
+    marginTop: 20,
+    marginLeft: 20,
+
+    // fontFamily: "fantasy",
+  },
+
+  imgArticle: {
+    width: "100%",
+    height: 180,
+    alignSelf: "center",
+    marginTop: 20,
+  },
+  texts: {
+    color: "white",
+    fontSize: 14,
+    alignSelf: "flex-end",
+    marginRight: 20,
+    marginTop: 30,
+
   },
   
   imgArticle: {
