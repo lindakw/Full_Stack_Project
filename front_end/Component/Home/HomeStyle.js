@@ -5,9 +5,6 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     flex: 1,
     justifyContent: "center",
-<<<<<<< HEAD
-    alignItems: "center"
-=======
     alignItems: "center",
   },
   buttonText: {
@@ -30,7 +27,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     paddingTop: 20,
     marginBottom: 40,
->>>>>>> d04c7607bba46cbff2282039152630721a8d67f4
   },
   buttonText: {
     color: "black",
@@ -41,7 +37,7 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: "pink",
     borderRadius: 40,
-    textAlign: 'center',
+    textAlign: "center",
     paddingTop: 20,
     paddingLeft: 30,
   },
@@ -50,12 +46,10 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: "pink",
     borderRadius: 40,
-    textAlign: 'center',
+    textAlign: "center",
     paddingTop: 20,
     marginBottom: 40,
     paddingLeft: 30,
-  
   },
- 
 });
 export default styles;

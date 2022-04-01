@@ -27,14 +27,12 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   title: {
-    fontFamily: "fantasy",
     fontSize: 30,
     color: "pink",
   },
   textArticle: {
     color: "white",
     fontSize: 15,
-    fontFamily: "fantasy",
   },
 });
 
