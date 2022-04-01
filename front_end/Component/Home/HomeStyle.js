@@ -5,9 +5,6 @@ const styles = StyleSheet.create({
     backgroundColor: "black",
     flex: 1,
     justifyContent: "center",
-
-    alignItems: "center",
-
     alignItems: "center",
 
     alignItems: "center",
@@ -36,9 +33,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     // padding: 20,
     marginBottom: 40,
-
-    
-  
   },
 
 
@@ -55,7 +49,7 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: "pink",
     borderRadius: 40,
-    textAlign: 'center',
+    textAlign: "center",
     paddingTop: 20,
     paddingLeft: 30,
   },
@@ -64,13 +58,10 @@ const styles = StyleSheet.create({
     height: 60,
     backgroundColor: "pink",
     borderRadius: 40,
-    textAlign: 'center',
+    textAlign: "center",
     paddingTop: 20,
     marginBottom: 40,
     paddingLeft: 30,
-  
-  }
-
- 
+  },
 });
 export default styles;

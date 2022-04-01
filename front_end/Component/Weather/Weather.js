@@ -107,7 +107,7 @@ const Weather = () => {
           </View>
 
           <FlatList
-            data={data.splice(0, 7)}
+            data={data.splice(0, 5)}
             renderItem={({ item, index }) => (
               <View key={index} style={styles.forcastView}>
                 <Text style={styles.infoStyle}>{dayname(item.dt)}</Text>

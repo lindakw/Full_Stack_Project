@@ -10,9 +10,33 @@ const  App=()=> {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home} options={{title:'Home',  headerStyle:{backgroundColor:'white'}, headerTitleAlign:'center',}}></Stack.Screen>
-        <Stack.Screen name="News" component={News} options={{title:'News', headerStyle:{backgroundColor:'white'}, headerTitleAlign:'center'}}></Stack.Screen>
-        <Stack.Screen name="Weather" component={Weather} options={{title:'Weather',headerStyle:{backgroundColor:'white'}, headerTitleAlign:'center'}}></Stack.Screen>
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{
+            title: "Home",
+            headerStyle: { backgroundColor: "white" },
+            headerTitleAlign: "center",
+          }}
+        ></Stack.Screen>
+        <Stack.Screen
+          name="News"
+          component={News}
+          options={{
+            title: "News",
+            headerStyle: { backgroundColor: "white" },
+            headerTitleAlign: "center",
+          }}
+        ></Stack.Screen>
+        <Stack.Screen
+          name="Weather"
+          component={Weather}
+          options={{
+            title: "Weather",
+            headerStyle: { backgroundColor: "white" },
+            headerTitleAlign: "center",
+          }}
+        ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>
   );

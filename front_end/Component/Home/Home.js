@@ -22,8 +22,6 @@ const Home = (props) => {
           Check the Weather!
         </Text>
       </TouchableOpacity>
-
-   
     </View>
   );
 };

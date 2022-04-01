@@ -13,17 +13,16 @@ const styles = StyleSheet.create({
     height: "100%",
     flex: 1,
   },
-  
+
   weatherImg: {
     position: "absolute",
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
     top: 0,
   },
   searchContainer: {
     flexDirection: "row",
     marginTop: 20,
-    
   },
   input: {
     borderColor: "white",
@@ -32,29 +31,25 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginLeft: 40,
     width: 250,
-    color:"white",
+    color: "white",
     paddingLeft: 10,
-    
   },
   cityText: {
     color: "white",
     fontSize: 25,
     marginTop: 20,
     textAlign: "center",
-    
   },
   tempText: {
     color: "white",
     fontSize: 50,
     textAlign: "center",
-
   },
   infoText: {
     color: "white",
     fontSize: 20,
     textAlign: "center",
-  marginBottom: 5,
-    
+    marginBottom: 5,
   },
   highLow: {
     flexDirection: "row",
@@ -65,7 +60,6 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 16,
     marginRight: 20,
-    
   },
   lowText: {
     color: "white",
@@ -87,12 +81,9 @@ const styles = StyleSheet.create({
     marginLeft: 40,
     borderRadius: 5,
     borderWidth: 0.5,
-    borderColor: 'white',
-    opacity:0.7
-   
-    
-  }
-  
+    borderColor: "white",
+    opacity: 0.7,
+  },
 });
 
 export default styles;
