@@ -7,8 +7,7 @@ import {
   Image,
   FlatList,
   Linking,
-  Alert,
-  Platform
+  Alert, Platform
 } from "react-native";
 import React, { useState } from "react";
 import axios from "axios";
@@ -44,11 +43,15 @@ const News = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>We got the news!</Text>
+      <Image style={styles.newsImg}
+      source={require("../News/newsImage.png")}
+      />
+      <Text style={styles.title}>Daily News</Text>
       <View style={styles.searchContainer}>
+
         <TextInput
           placeholder="Search for news"
-          placeholderTextColor="gray"
+          placeholderTextColor="white"
           style={styles.searchInput}
           onChangeText={setSearchTerm}
           value={searchTerm}
@@ -61,7 +64,7 @@ const News = () => {
           <AntDesign
             style={styles.icon}
             name="search1"
-            size={30}
+            size={28}
             color="white"
           />
         </TouchableOpacity>
@@ -80,7 +83,7 @@ const News = () => {
           <FlatList
             data={articles.slice(0, 7)}
             renderItem={({ item, index }) => (
-              <View key={index}>
+              <View key={index} style={styles.flatList}>
                 <Image
                   style={styles.imgArticle}
                   source={{

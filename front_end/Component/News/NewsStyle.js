@@ -2,66 +2,51 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "black",
     // // alignItems: "center",
-    // height: "100%",
-    
   },
   searchContainer: {
     flexDirection: "row",
   },
 
   searchInput: {
-    marginTop: 25,
-    height: 36,
-    width: 250,
+    marginTop: 10,
+    height: 30,
+    width: 300,
     borderWidth: 1,
+    backgroundColor:"#95B2B0",
     borderColor: "white",
     borderRadius: 20,
     color: "white",
-    fontSize: 16,
-    marginLeft: 45,
+    fontSize: 19,
+    marginLeft: 30,
     paddingLeft: 10,
   },
-  
   icon: {
-    marginTop: 25,
-    marginLeft: 20,
+    marginTop: 11,
+    marginLeft: 15,
   },
+  newsImg: {
+    position: "absolute",
+    width: '100%',
+    height: '100%', 
+   },
   title: {
-
-    // fontFamily: "fantasy",
+    fontFamily: "monospace",
+    marginTop: 8,
     fontSize: 40,
-    color: "pink", 
-    textAlign: "center",
-
-    fontSize: 30,
-    color: "pink",
-
-  },
-  textArticle: {
     color: "white",
-    fontSize: 15,
-
-    marginTop: 20,
-    marginLeft: 20,
-   
-    // fontFamily: "fantasy",
-
-    // fontFamily: "fantasy",
-    fontSize: 40,
-    color: "pink",
     textAlign: "center",
   },
   textArticle: {
     color: "white",
-    fontSize: 13,
+    fontSize: 14,
     marginTop: 20,
     marginLeft: 20,
-
     // fontFamily: "fantasy",
   },
-
+  flatList: {
+    backgroundColor: "black",
+  },
   imgArticle: {
     width: "100%",
     height: 180,

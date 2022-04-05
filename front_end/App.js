@@ -9,33 +9,27 @@ const Stack = createNativeStackNavigator();
 const  App=()=> {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Home" 
+        screenOptions={{
+          headerStyle: { backgroundColor: "#95B2B0" },
+          headerTitleAlign: "center",
+          headerTintColor: "white",
+        }}
+      >
         <Stack.Screen
           name="Home"
           component={Home}
-          options={{
-            title: "Home",
-            headerStyle: { backgroundColor: "white" },
-            headerTitleAlign: "center",
-          }}
+          
         ></Stack.Screen>
         <Stack.Screen
           name="News"
           component={News}
-          options={{
-            title: "News",
-            headerStyle: { backgroundColor: "white" },
-            headerTitleAlign: "center",
-          }}
+          
         ></Stack.Screen>
         <Stack.Screen
           name="Weather"
           component={Weather}
-          options={{
-            title: "Weather",
-            headerStyle: { backgroundColor: "white" },
-            headerTitleAlign: "center",
-          }}
+          
         ></Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

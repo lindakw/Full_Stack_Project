@@ -5,8 +5,8 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  Alert,
   FlatList,
+  Alert,
   Platform
 } from "react-native";
 
@@ -46,13 +46,13 @@ const Weather = () => {
   };
 
   const searchWeather = () => {
-    if (place === ""){
+    if (place === "") {
       Alert.alert("Can't leave blank. Please enter a city.")
-    }else {
+    } else {
       (async () => {
         try {
-          const weatherResponse= Platform.OS === "web" ? await axios.get(`http://localhost:3000/api/weather?q=${place}`) : await axios.get( `http://10.0.2.2:3000/api/weather?q=${place}`)
-         
+          const weatherResponse = Platform.OS === "web" ? await axios.get(`http://localhost:3000/api/weather?q=${place}`) : await axios.get(`http://10.0.2.2:3000/api/weather?q=${place}`)
+
           setInfo(weatherResponse.data);
           setShowWeatherInfo(true);
           //console.log("This is the weather data ==>", weatherResponse.data);
@@ -61,21 +61,20 @@ const Weather = () => {
         }
       })();
     }
-   
   };
 
   return (
     <View style={styles.container}>
       <Image
         style={styles.weatherImg}
-        source={require("../Weather/cloud.png")}
+        source={require("../Weather/rock.png")}
       />
 
       <View style={styles.searchContainer}>
         <TextInput
-          placeholderTextColor="gray"
+          placeholderTextColor="white"
           style={styles.input}
-          placeholder=" search for a city"
+          placeholder="search for a city"
           value={place}
           onChangeText={setPlace}
         />
@@ -124,7 +123,6 @@ const Weather = () => {
             keyExtractor={(item, index) => index.toString()}
             
           />
-          
         </View>
         
         
