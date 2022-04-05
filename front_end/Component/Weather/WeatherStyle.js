@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
   },
   searchContainer: {
     flexDirection: "row",
-    marginTop: 20,
+    marginTop: 30,
     
   },
   input: {
@@ -30,23 +30,28 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     borderWidth: 2,
     marginRight: 10,
-    marginLeft: 40,
-    width: 250,
+    marginLeft: 30,
+    width: 290,
+    height: 30,
+    backgroundColor: "#95B2B0",
     color:"white",
     paddingLeft: 10,
     
   },
   cityText: {
     color: "white",
-    fontSize: 25,
-    marginTop: 20,
+    fontSize: 30,
+    fontWeight:"bold",
+    marginTop: 10,
     textAlign: "center",
+    fontFamily: "monospace",
     
   },
   tempText: {
     color: "white",
     fontSize: 50,
     textAlign: "center",
+    fontFamily: "monospace",
 
   },
   infoText: {
@@ -54,6 +59,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     textAlign: "center",
   marginBottom: 5,
+  fontFamily: "monospace",
     
   },
   highLow: {
@@ -65,6 +71,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 16,
     marginRight: 20,
+    fontFamily: "monospace",
     
   },
   lowText: {
@@ -74,23 +81,29 @@ const styles = StyleSheet.create({
   infoStyle: {
     color: "white",
     fontSize: 18,
+    fontWeight:"bold",
     flexDirection: "column",
     alignSelf: "center",
     // flexWrap: "wrap",
-    paddingTop: 10,
+   marginTop: 10,
   },
+  
   forcastView: {
-    // marginTop: 20,
-    backgroundColor: "#696969",
+    marginTop: 20,
+    //backgroundColor: "#696969",
     width: 300,
-    height: 100,
+    height: 300,
     marginLeft: 40,
     borderRadius: 5,
-    borderWidth: 0.5,
-    borderColor: 'white',
-   
-    
-  }
+    opacity: 0.9,
+  },
+
+  forecastCard: {
+    backgroundColor: "#95B2B0",
+    marginTop: 20,
+    borderRadius: 5,
+    height: 80,
+  },
   
 });
 

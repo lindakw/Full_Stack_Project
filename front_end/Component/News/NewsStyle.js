@@ -2,39 +2,63 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "black",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  searchInput: {
-    marginTop: 25,
-    height: 30,
-    width: 400,
-    alignItems: "center",
-    justifyContent: "center",
-    borderWidth: 1,
-    borderColor: "white",
-    borderRadius: 20,
-    padding: 10,
-    color: "white",
-    fontSize: 16,
+    // // alignItems: "center",
   },
   searchContainer: {
     flexDirection: "row",
   },
-  icon: {
-    marginTop: 25,
-    marginLeft: 20,
+
+  searchInput: {
+    marginTop: 10,
+    height: 30,
+    width: 300,
+    borderWidth: 1,
+    backgroundColor:"#95B2B0",
+    borderColor: "white",
+    borderRadius: 20,
+    color: "white",
+    fontSize: 19,
+    marginLeft: 30,
+    paddingLeft: 10,
   },
+  icon: {
+    marginTop: 11,
+    marginLeft: 15,
+  },
+  newsImg: {
+    position: "absolute",
+    width: '100%',
+    height: '100%', 
+   },
   title: {
-    fontFamily: "fantasy",
-    fontSize: 30,
-    color: "pink",
+    fontFamily: "monospace",
+    marginTop: 8,
+    fontSize: 40,
+    color: "white",
+    textAlign: "center",
   },
   textArticle: {
     color: "white",
-    fontSize: 15,
-    fontFamily: "fantasy",
+    fontSize: 14,
+    marginTop: 20,
+    marginLeft: 20,
+    // fontFamily: "fantasy",
+  },
+  flatList: {
+    backgroundColor: "black",
+  },
+  imgArticle: {
+    width: "100%",
+    height: 180,
+    alignSelf: "center",
+    marginTop: 20,
+  },
+  texts: {
+    color: "white",
+    fontSize: 14,
+    alignSelf: "flex-end",
+    marginRight: 20,
+    marginTop: 30,
   },
 });
 
