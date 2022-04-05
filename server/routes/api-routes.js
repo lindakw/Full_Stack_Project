@@ -9,8 +9,6 @@ const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?appid=${pro
 
 //https://api.openweathermap.org/data/2.5/forecast?appid=80e84043f2204dfda5d64734dc8ede47
 
-
-
 //
 router.get("/", async (req, res) => {
   try {

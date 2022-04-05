@@ -5,8 +5,9 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
-  ScrollView,
+  Alert,
   FlatList,
+  Platform
 } from "react-native";
 
 import React, { useState, useEffect } from "react";
@@ -45,21 +46,22 @@ const Weather = () => {
   };
 
   const searchWeather = () => {
-    (async () => {
-      try {
-        const weatherResponse = await axios.get(
-          // `http://localhost:3000/api/weather?q=${place}`
-
-          // for simulator
-          `http://10.0.2.2:3000/api/weather?q=${place}`
-        );
-        setInfo(weatherResponse.data);
-        setShowWeatherInfo(true);
-        //console.log("This is the weather data ==>", weatherResponse.data);
-      } catch (err) {
-        console.log(err);
-      }
-    })();
+    if (place === ""){
+      Alert.alert("Can't leave blank. Please enter a city.")
+    }else {
+      (async () => {
+        try {
+          const weatherResponse= Platform.OS === "web" ? await axios.get(`http://localhost:3000/api/weather?q=${place}`) : await axios.get( `http://10.0.2.2:3000/api/weather?q=${place}`)
+         
+          setInfo(weatherResponse.data);
+          setShowWeatherInfo(true);
+          //console.log("This is the weather data ==>", weatherResponse.data);
+        } catch (err) {
+          console.log(err);
+        }
+      })();
+    }
+   
   };
 
   return (
@@ -105,21 +107,29 @@ const Weather = () => {
               L: {Math.round(info.list[0].main?.temp_min)}°F
             </Text>
           </View>
-
-          <FlatList
-            data={data.splice(0, 5)}
+        
+       
+          <FlatList 
+            data={data.splice(0, 8)}
+            style={styles.forcastView}
             renderItem={({ item, index }) => (
-              <View key={index} style={styles.forcastView}>
+              <View key={index} style={styles.forecastCard}>
                 <Text style={styles.infoStyle}>{dayname(item.dt)}</Text>
                 <Text style={styles.infoStyle}>
                   {Math.round(item.main.temp)} °F
                 </Text>
               </View>
+              
             )}
             keyExtractor={(item, index) => index.toString()}
+            
           />
+          
         </View>
+        
+        
       ) : null}
+      
     </View>
   );
 };

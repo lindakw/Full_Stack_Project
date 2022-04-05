@@ -7,6 +7,8 @@ import {
   Image,
   FlatList,
   Linking,
+  Alert,
+  Platform
 } from "react-native";
 import React, { useState } from "react";
 import axios from "axios";
@@ -19,22 +21,24 @@ const News = () => {
   const [articles, setArticles] = useState([]);
 
   const searchNews = () => {
-    (async () => {
-      try {
-        const newsResponse = await axios.get(
-          // to access the web
-          //  `http://localhost:3000/api/?q=${searchTerm}`
-
-          // for the simulator
-          `http://10.0.2.2:3000/api/?q=${searchTerm}`
-        );
-        setIsSearching(true);
-        setArticles(newsResponse.data);
-        console.log("This is our data ===>", newsResponse.data);
-      } catch (err) {
-        console.log(err);
-      }
-    })();
+    if (searchTerm === "") {
+      Alert.alert("Can't leave empty. Please enter a text.")
+    } else {
+      (async () => {
+        try {
+      
+            const newsResponse= Platform.OS === "web" ? await axios.get(`http://localhost:3000/api/?q=${searchTerm}`) : await axios.get( `http://10.0.2.2:3000/api/?q=${searchTerm}`)
+            
+        
+          setIsSearching(true);
+          setArticles(newsResponse.data);
+          console.log("This is our data ===>", newsResponse.data);
+        } catch (err) {
+          console.log(err);
+        }
+      })();
+    }
+   
   };
   
 

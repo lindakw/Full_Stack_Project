@@ -75,14 +75,21 @@ const styles = StyleSheet.create({
   },
   forcastView: {
     // marginTop: 20,
-    backgroundColor: "#696969",
+    //backgroundColor: "#696969",
     width: 300,
-    height: 100,
+    height: 400,
     marginLeft: 40,
-    borderRadius: 5,
-    borderWidth: 0.5,
-    borderColor: "white",
+    //borderRadius: 5,
+    //borderWidth: 0.5,
+    //borderColor: "white",
     opacity: 0.7,
+  },
+
+  forecastCard: {
+    backgroundColor: "#696969",
+    marginTop: 20,
+    borderRadius: 5,
+    height: 80,
   },
 });
 
