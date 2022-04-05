@@ -13,11 +13,11 @@ const styles = StyleSheet.create({
     height: "100%",
     flex: 1,
   },
-  
+
   weatherImg: {
     position: "absolute",
-    width: '100%',
-    height: '100%',
+    width: "100%",
+    height: "100%",
     top: 0,
   },
   searchContainer: {
@@ -36,7 +36,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#95B2B0",
     color:"white",
     paddingLeft: 10,
-    
   },
   cityText: {
     color: "white",
